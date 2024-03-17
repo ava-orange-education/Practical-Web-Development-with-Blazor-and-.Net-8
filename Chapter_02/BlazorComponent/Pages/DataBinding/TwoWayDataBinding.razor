@@ -1,0 +1,10 @@
+﻿@page "/TwoWayDataBinding"
+<h3>TwoWayDataBinding</h3>
+
+<h1>@Title</h1>
+
+<input @bind="@Title" />
+
+@code {
+    private string Title { get; set; } = "Hello, World!";
+}

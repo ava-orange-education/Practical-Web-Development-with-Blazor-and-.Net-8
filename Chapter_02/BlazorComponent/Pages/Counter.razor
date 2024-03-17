@@ -1,0 +1,21 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+<p>@message</p>
+@code {
+    [Parameter]
+    public int count { get; set; } = 0;
+    string? message { get; set; }
+    protected override void OnParametersSet()
+    {
+        if (string.IsNullOrEmpty(message))
+        {
+            message = "Parameters set for the first time";
+        }
+        else
+        {
+            message = "Parameter reset to " + count;
+        }
+        base.OnParametersSet();
+    }
+}

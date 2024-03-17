@@ -1,0 +1,20 @@
+﻿@page "/example"
+@inject IJSRuntime JSRuntime
+
+<h3>Calling C# from JavaScript Example</h3>
+
+<button @onclick=CallReverse>Click</button>
+
+@code {
+    async Task CallReverse()
+    {
+        await JSRuntime.InvokeVoidAsync("reverseString", "Chandradev");
+    }
+
+    [JSInvokable]
+    public static Task InteropReverse(string input)
+    {
+        var result = new String(input.Reverse().ToArray());
+        return Task.FromResult(result);
+    }
+}

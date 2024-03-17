@@ -1,0 +1,18 @@
+﻿@page "/chart"
+@inject IJSRuntime JSRuntime
+<h3>Chart Demo</h3>
+<canvas id="myChart"></canvas>
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var dataOptions = new
+        {
+            labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun" },
+            data = new[] { 26, 44, 54, 66, 55, 58 },
+            label = "Total Sales",
+            color = "#57a64a",
+            fill = false
+        };
+        await JSRuntime.InvokeVoidAsync("showChart", "line", dataOptions);
+    }
+}

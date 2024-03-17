@@ -1,0 +1,12 @@
+﻿<h3>Child Component</h3>
+<p>Current Datetime :@CurrentDate</p>
+
+@code {
+    public string? CurrentDate { get; set; } = System.DateTime.Now.ToString();
+    public void RefreshMe()
+    {
+        CurrentDate = System.DateTime.Now.ToString();
+        StateHasChanged();
+    }
+
+}

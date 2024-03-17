@@ -1,0 +1,52 @@
+﻿@page "/emp/delete/{empId:int}"
+@using EmpCRUD.Shared.Model
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h2>Delete Emp</h2>
+<br />
+<div class="form-group">
+    <h4>Do you want to delete this user?</h4>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>FirstName</td>
+                <td>@emp.FirstName</td>
+            </tr>
+            <tr>
+                <td>LastName</td>
+                <td>@emp.LastName</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>@emp.Email</td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>@emp.Salary</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <input type="submit" value="Delete" @onclick="(async () => await RemoveEmp(emp.Id))" class="btn btn-danger" />
+    <input type="submit" value="Cancel" @onclick="(() => Cancel())" class="btn btn-warning" />
+</div>
+@code {
+    [Parameter]
+    public int empId { get; set; }
+    Emp emp = new Emp();
+    protected override async Task OnInitializedAsync()
+    {
+        emp = await Http.GetFromJsonAsync<Emp>("/api/Emp/" + Convert.ToInt32(empId));
+    }
+    protected async Task RemoveEmp(int empId)
+    {
+        await Http.DeleteAsync("api/Emp/" + empId);
+        NavigationManager.NavigateTo("/fetchempdetails");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/fetchempdetails");
+    }
+}

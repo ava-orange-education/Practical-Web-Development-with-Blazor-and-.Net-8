@@ -1,0 +1,16 @@
+﻿@page "/StateChange"
+<h3>StateChange</h3>
+<button @onclick="PerformAsyncOperation">Click Me</button>
+<div>@result</div>
+
+@code {
+    private string result;
+
+    private async Task PerformAsyncOperation()
+    {
+        // Simulate an asynchronous operation
+        await Task.Delay(1000);
+        result = "Operation completed";
+        StateHasChanged(); // Trigger re-render
+    }
+}

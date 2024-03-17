@@ -1,0 +1,47 @@
+﻿@page "/login"
+@inject HttpClient Http
+@inject TokenAuthenticationStateProvider AuthStateProvider
+@inject ILogger<Login> Logger
+
+<div class="container col-6">
+    @if (loginFailure)
+    {
+        <div class="alert alert-danger">Your credentials did not work. Please try again.</div>
+    }
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Login</h5>
+            <EditForm Model="credentials" OnValidSubmit="SubmitCredentials">
+                <DataAnnotationsValidator />
+
+                <div class="form-group">
+                    <label>Email address</label>
+                    <InputText class="form-control" @bind-Value="credentials.Email" />
+                    <ValidationMessage For="@(()=> credentials.Email)" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <InputText type="password" class="form-control" @bind-Value="credentials.Password" />
+                    <ValidationMessage For="@(()=> credentials.Password)" />
+                </div>
+                <button type="submit" class="btn btn-outline-primary btn-sm">Submit</button>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    BlazorWASMCustomTokenAuth.Model.Login credentials = new BlazorWASMCustomTokenAuth.Model.Login();
+    bool loginFailure;
+    EditForm loginform { get; set; }
+    async Task SubmitCredentials()
+    {
+        var response = await Http.PostAsJsonAsync("https://localhost:7098/api/login", credentials);
+        var result = await response.Content.ReadFromJsonAsync<LoginResult>();
+        loginFailure = result?.Token == null;
+        if (!loginFailure)
+        {
+            await AuthStateProvider.SetTokenAsync(result.Token, result.Expiry);
+        }
+    }
+}

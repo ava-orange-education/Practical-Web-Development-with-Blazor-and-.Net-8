@@ -1,0 +1,13 @@
+﻿@page "/onewaybinding2"
+<h1>@Title</h1>
+
+<button @onclick="UpdateTitle">Update Title</button>
+
+@code {
+    private string Title { get; set; } = "Hello, World!";
+
+    private void UpdateTitle()
+    {
+        Title = "Hello, Updated text message!";
+    }
+}

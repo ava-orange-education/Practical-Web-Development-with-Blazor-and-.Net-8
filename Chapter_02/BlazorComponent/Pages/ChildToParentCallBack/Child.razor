@@ -1,0 +1,20 @@
+﻿<h3>Child</h3>
+
+<div>
+    <input type="text" @bind="@message" />
+    <button @onclick="DisplayMessage">Click Here</button>
+</div>
+
+@code {
+
+    [Parameter]
+    public string? InputParam { get; set; }
+    [Parameter]
+    public EventCallback<string> OnClickCallback { get; set; }
+
+    private string? message;
+    private async Task DisplayMessage()
+    {
+        await OnClickCallback.InvokeAsync(message);
+    }
+}

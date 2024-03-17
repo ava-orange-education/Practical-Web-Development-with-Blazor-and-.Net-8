@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{895A401C-5444-4BBD-A376-1ED133BE103D}|EmpCRUD\\Client\\EmpCRUD.Client.csproj|d:\\wasmbook\\blazor book code\\chapter_07\\empcrud\\empcrud\\client\\pages\\emp\\addemp.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{895A401C-5444-4BBD-A376-1ED133BE103D}|EmpCRUD\\Client\\EmpCRUD.Client.csproj|solutionrelative:empcrud\\client\\pages\\emp\\addemp.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895A401C-5444-4BBD-A376-1ED133BE103D}|EmpCRUD\\Client\\EmpCRUD.Client.csproj|d:\\wasmbook\\blazor book code\\chapter_07\\empcrud\\empcrud\\client\\empcrud.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{895A401C-5444-4BBD-A376-1ED133BE103D}|EmpCRUD\\Client\\EmpCRUD.Client.csproj|solutionrelative:empcrud\\client\\empcrud.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a5174402-226b-48da-aa5c-91376ed45871}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddEmp.razor",
+              "DocumentMoniker": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\Pages\\Emp\\AddEmp.razor",
+              "RelativeDocumentMoniker": "EmpCRUD\\Client\\Pages\\Emp\\AddEmp.razor",
+              "ToolTip": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\Pages\\Emp\\AddEmp.razor",
+              "RelativeToolTip": "EmpCRUD\\Client\\Pages\\Emp\\AddEmp.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-17T23:45:16.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmpCRUD.Client",
+              "DocumentMoniker": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\EmpCRUD.Client.csproj",
+              "RelativeDocumentMoniker": "EmpCRUD\\Client\\EmpCRUD.Client.csproj",
+              "ToolTip": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\EmpCRUD.Client.csproj",
+              "RelativeToolTip": "EmpCRUD\\Client\\EmpCRUD.Client.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-17T23:45:07.3Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

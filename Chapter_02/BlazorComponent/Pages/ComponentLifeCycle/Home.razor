@@ -1,0 +1,12 @@
+﻿@page "/home"
+<h1>Hello, world!</h1>
+Welcome to your new app.
+<Counter count=theCount />
+<button @onclick=incrementCount>Click</button>
+@code {
+    int theCount { get; set; } = 1;
+    void incrementCount()
+    {
+        theCount++;
+    }
+}

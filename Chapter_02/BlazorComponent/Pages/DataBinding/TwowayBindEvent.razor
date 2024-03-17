@@ -1,0 +1,10 @@
+﻿@page "/TwowayBindEvent"
+<h3>TwowayBindEvent</h3>
+
+<h1>@Title</h1>
+
+<input @bind-value="Title" @bind-value:event="oninput" />
+
+@code {
+    private string Title { get; set; } = "Hello, World!";
+}

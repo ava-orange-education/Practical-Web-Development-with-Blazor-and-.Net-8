@@ -1,0 +1,104 @@
+﻿@page "/fetchempdetails"
+@using EmpCRUD.Shared.Model
+@inject HttpClient Http
+
+<h3>EmpDetails</h3>
+<div class="row">
+    <div class="col-md-6">
+        <a href='/emp/add' class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Add User
+        </a>
+    </div>
+    <div class="input-group col">
+        <input type="text" class="form-control" placeholder="Search user by name"
+        @bind="SearchString" @bind:event="oninput" @onkeyup="FilterEmp" />
+        @if (SearchString.Length > 0)
+        {
+            <div class="input-group-append">
+                <button class="btn btn-danger" @onclick="ResetSearch">
+                    <i class="fas fa-times"></i>
+                    ResetSearch
+                </button>
+            </div>
+        }
+    </div>
+</div>
+<br />
+@if (empList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped align-middle table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emp in empList)
+            {
+                <tr>
+                    <td>@emp.Id</td>
+                    <td>@emp.FirstName</td>
+                    <td>@emp.LastName</td>
+                    <td>@emp.Email</td>
+                    <td>@emp.Salary</td>
+                    <td>
+                        <a href='/emp/edit/@emp.Id' class="btn btn-outline-dark" role="button">
+                            Edit
+                        </a>
+                        <a href='/emp/delete/@emp.Id' class="btn btn-outline-danger" role="button">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+@code {
+    protected List<Emp> empList = new();
+    protected List<Emp> searchUserData = new();
+    protected Emp emp = new();
+    protected string SearchString { get; set; } = string.Empty;
+    protected override async Task OnInitializedAsync()
+    {
+        await GetEmp();
+    }
+    protected async Task GetEmp()
+    {
+        empList = await Http.GetFromJsonAsync<List<Emp>>("api/Emp");
+        searchUserData = empList;
+    }
+    protected void FilterEmp()
+    {
+        if (!string.IsNullOrEmpty(SearchString))
+        {
+            empList = searchUserData
+                .Where(x => x.FirstName.IndexOf(SearchString, StringComparison.OrdinalIgnoreCase) != -1)
+                .ToList();
+        }
+        else
+        {
+            empList = searchUserData;
+        }
+    }
+    protected void DeleteConfirm(int empId)
+    {
+        emp = empList.FirstOrDefault(x => x.Id == empId);
+    }
+    public void ResetSearch()
+    {
+        SearchString = string.Empty;
+        empList = searchUserData;
+    }
+}

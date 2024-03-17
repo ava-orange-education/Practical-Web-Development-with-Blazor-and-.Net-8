@@ -1,0 +1,17 @@
+﻿@page "/InitializeDemo"
+<h1>@Title</h1>
+
+<p>I was rendered at @TimeRendered</p>
+
+@code {
+
+    private string? Title { get; set; }
+    private string? TimeRendered { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Title = "Hello World";
+        TimeRendered = DateTime.Now.ToShortTimeString();
+    }
+
+}

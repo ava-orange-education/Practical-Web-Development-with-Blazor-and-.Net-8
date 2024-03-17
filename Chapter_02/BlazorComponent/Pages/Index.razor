@@ -1,0 +1,16 @@
+﻿@page "/"
+@using BlazorComponent.Pages.Cascading
+
+<PageTitle>Index</PageTitle>
+
+<h1>Demo of Cascading Parameter</h1>
+<hr />
+
+<CascadingValue Value="@Name">
+    <Child1></Child1>
+    <Child2></Child2>
+</CascadingValue>
+
+@code {
+    String Name = "Index Page";
+}

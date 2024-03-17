@@ -1,0 +1,10 @@
+﻿.parastyle {
+    background-color: green;
+    font-size: 22px;
+}
+
+h1 {
+    color: red;
+    font-style: italic;
+    text-shadow: 2px 2px 2px gray;
+}

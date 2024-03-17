@@ -1,0 +1,20 @@
+﻿@page "/counter"
+@inject IJSRuntime JSRuntime
+<PageTitle>Counter</PageTitle>
+
+<h3>Handle JavaScript Function Return Value Example</h3>
+
+<button @onclick="CallJavaScript">Call JavaScript Function</button>
+
+<p>Result: @result</p>
+
+@code {
+    private int result;
+
+    private async Task CallJavaScript()
+    {
+        // Call the JavaScript function and capture the return value
+        result = await JSRuntime.InvokeAsync<int>("multiplyNumbers", 5, 3);
+    }
+}
+

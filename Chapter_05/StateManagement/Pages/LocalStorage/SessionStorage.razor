@@ -1,0 +1,14 @@
+﻿@page "/sessionstorage"
+<h3>Session Storage</h3>
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+<b>@Name</b>
+
+@code {
+    public string? Name { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        await sessionStorage.SetItemAsync("name", "Chandradev");
+        Name = await sessionStorage.GetItemAsync<string>("name");
+    }
+
+}

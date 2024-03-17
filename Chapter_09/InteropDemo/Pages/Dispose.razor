@@ -1,0 +1,41 @@
+﻿@page "/example1"
+
+@inject IJSRuntime JSRuntime
+
+<h3>Dispose of Object References Example</h3>
+
+<button @onclick="PassCSharpObject">Pass C# Object to JavaScript</button>
+
+@code {
+
+    // C# class
+    public class MyObject
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
+
+    private async Task PassCSharpObject()
+    {
+        // Create an instance of the C# class
+        var myObject = new MyObject
+            {
+                Name = "John Doe",
+                Age = 30
+            };
+
+        // Pass the C# object to JavaScript and get a reference
+        //var dotNetObjectRef = DotNetObjectReference.Create(myObject);
+
+        try
+        {
+            // Call the JavaScript function with the object reference
+            await JSRuntime.InvokeAsync<object>("displayObject", myObject);
+        }
+        finally
+        {
+            // Dispose of the object reference to release resources
+            //dotNetObjectRef.Dispose();
+        }
+    }
+}

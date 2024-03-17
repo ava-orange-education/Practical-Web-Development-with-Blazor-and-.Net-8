@@ -1,0 +1,20 @@
+﻿@page "/users/{userId:int}"
+@page "/users"
+
+<h3>User Details</h3>
+
+@if (userId.HasValue)
+{
+    <h4>User Details</h4>
+    <p>User ID: @userId.Value</p>
+}
+else
+{
+    <h4>All Users</h4>
+    <!-- Display all users -->
+}
+
+@code {
+    [Parameter]
+    public int? userId { get; set; }
+}

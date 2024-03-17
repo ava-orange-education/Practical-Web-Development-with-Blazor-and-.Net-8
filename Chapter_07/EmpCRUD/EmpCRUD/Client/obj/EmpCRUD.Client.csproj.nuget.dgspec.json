@@ -1,0 +1,170 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\EmpCRUD.Client.csproj": {}
+  },
+  "projects": {
+    "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\EmpCRUD.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\EmpCRUD.Client.csproj",
+        "projectName": "EmpCRUD.Client",
+        "projectPath": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\EmpCRUD.Client.csproj",
+        "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
+        "outputPath": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\WasmBook\\RazorClassLibrary1\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Shared\\EmpCRUD.Shared.csproj": {
+                "projectPath": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Shared\\EmpCRUD.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[8.0.3, 8.0.3]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Shared\\EmpCRUD.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Shared\\EmpCRUD.Shared.csproj",
+        "projectName": "EmpCRUD.Shared",
+        "projectPath": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Shared\\EmpCRUD.Shared.csproj",
+        "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
+        "outputPath": "D:\\WasmBook\\Blazor Book Code\\Chapter_07\\EmpCRUD\\EmpCRUD\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\WasmBook\\RazorClassLibrary1\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

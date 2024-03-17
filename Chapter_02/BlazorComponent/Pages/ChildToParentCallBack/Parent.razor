@@ -1,0 +1,16 @@
+﻿@page "/parent"
+<h3>Parent</h3>
+
+
+<Child InputParam="message" OnClickCallback="@ShowMessage" />
+<p>@message</p>
+
+@code
+{
+    private string message=string.Empty;
+
+    private void ShowMessage(string _message)
+    {
+        message = _message;
+    }
+}

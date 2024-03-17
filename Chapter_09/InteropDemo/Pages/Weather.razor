@@ -1,0 +1,31 @@
+﻿@page "/weather"
+@using System.Text.Json
+@inject IJSRuntime JSRuntime
+
+<h3>Passing C# Object to JavaScript Example</h3>
+
+<button @onclick="PassCSharpObject">Pass C# Object to JavaScript</button>
+
+@code {
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
+
+    private async Task PassCSharpObject()
+    {
+        // Create an instance of the Person class
+        var person = new Person
+            {
+                Name = "Anvi Sah",
+                Age = 8
+            };
+
+        // Serialize the C# object to a JSON string
+        var jsonString = JsonSerializer.Serialize(person);
+
+        // Call the JavaScript function with the serialized JSON string
+        await JSRuntime.InvokeAsync<object>("displayPerson", jsonString);
+    }
+}

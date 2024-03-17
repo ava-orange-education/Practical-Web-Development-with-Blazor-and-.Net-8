@@ -1,0 +1,16 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+<h3>JavaScript Interop in Blazor</h3>
+<br />
+<button @onclick="CallJavaScript">Click Me</button>
+
+@code
+{
+  
+    private async Task CallJavaScript()
+    {
+        await JS.InvokeVoidAsync("helloFunction");
+    }
+   
+}
